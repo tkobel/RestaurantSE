@@ -1,5 +1,6 @@
 package jdbc;
 import java.sql.SQLException;
+import java.util.List;
 /**
  *
  * @author Tracy
@@ -9,4 +10,7 @@ public interface DBAccessor {
             throws IllegalArgumentException, ClassNotFoundException, SQLException;
     
     public abstract void closeConnection() throws SQLException;
+    
+    public abstract List findRecords(String sqlStatement, boolean closeConnection) 
+            throws SQLException, Exception;
 }
