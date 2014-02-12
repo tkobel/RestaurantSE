@@ -7,5 +7,5 @@ import java.util.List;
  * @author Tracy
  */
 public interface DAOStrategy {
-    List<MenuItem> getCurrentMenuChoices() throws RuntimeException;
+    public abstract List<MenuItem> getMenuItems() throws RuntimeException;
 }
